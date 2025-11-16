@@ -47,7 +47,15 @@ nav {
     color: black;
 }
 
-.menu-item__link::after{
+.menu-item__link-back{
+    font-size: clamp(1rem, 0.7359rem + 1.1268vw, 1.75rem);
+    text-decoration: none;
+    color black;
+    position: relative;
+}
+
+.menu-item__link::after,
+.menu-item__link-back::after{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -64,7 +72,9 @@ nav {
 }
 
 /* Expansión en hover */
-.menu-item__link:hover::after {
+.menu-item__link:hover::after,
+.menu-item__link-back:hover::after
+ {
     width: 100%;
 }
 
@@ -84,4 +94,5 @@ nav {
 
 .services-heading{
     margin: 0;
+    font-size: clamp(1rem, 0.1197rem + 3.7559vw, 3.5rem);
 }
