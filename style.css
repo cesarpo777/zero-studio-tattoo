@@ -113,6 +113,21 @@ body {
     /* font-size: 64px; */
     margin: 0;
     color: #2d432f;
+    position: relative;
+    background-image: url('img/fondo-musgo.png');
+    background-size: cover; /* Para que cubra todo el área */
+    background-position: center; /* Para centrarla */
+    background-repeat: no-repeat; /* Para que no se repita */
+    background-position: 50px 30px; /* X=50px, Y=30px desde arriba-izquierda */
+    background-position: 0% 30%;
+}
+
+.green-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .img-container{
