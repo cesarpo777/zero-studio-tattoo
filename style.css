@@ -2,6 +2,37 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'High Spirited';
+    src: url('fonts/High Spirited.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eina';
+    src: url('fonts/Eina01-Bold.ttf') format('truetype'); /* ← Corregido */
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eina';
+    src: url('fonts/Eina01-Regular.ttf') format('truetype'); /* ← Corregido */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next World";
+    src: url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.eot");
+    src: url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b820ad079bcb3b0bad2caa08a92d9ce7.svg#Avenir Next World")format("svg");
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -51,6 +82,39 @@ body {
     object-fit: cover;
 }
 
+.studio-name{
+    margin: 0;
+}
+
+.title__first-word,
+.title__second-word{
+   font-size: 45px;
+   letter-spacing: 1.5px;
+   font-family: 'Eina', Arial, sans-serif;
+   font-weight: 700;
+}
+
+.title__second-word{
+    font-family: 'Eina', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.subheading{
+   font-family: "Avenir Next World";
+   font-weight: 200;
+   letter-spacing: 1.5px;
+   margin: 0;
+}
+
+.signature{
+    font-family: 'High Spirited', Arial, sans-serif;
+    /* font-size: clamp(1.5rem, 1.1919rem + 1.3146vw, 2.375rem); */
+    font-size: clamp(2.25rem, 1.6338rem + 2.6291vw, 4rem);
+    /* font-size: 64px; */
+    margin: 0;
+    color: #2d432f;
+}
+
 .img-container{
     width: 300px;
     height: 300px;
@@ -87,12 +151,17 @@ nav {
     text-decoration: none;
 
     svg{
-        width: 40px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
+        transition: all .3s ease;
 
         path{
             fill: #AAAAA6;
         }
+    }
+
+    svg:hover{
+        opacity: .4;
     }
 }
 
@@ -105,6 +174,7 @@ nav {
     text-decoration: none;
     letter-spacing: 1.5px;
     transition: all .3s ease;
+    margin-top: 64px;
 }
 
 .menu-item__link:hover{
@@ -137,7 +207,6 @@ nav {
   color: black;
   font-size: clamp(1rem, 0.3618rem + 2.723vw, 2.8125rem);
 }
-
 
 
 .icon {
