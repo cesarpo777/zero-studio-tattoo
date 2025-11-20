@@ -3,19 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios - Estudio Tattoo XYZ</title>
+
+  <!-- SEO -->
+  <title>Servicios en Zero Studio | Tattoo, Piercing, Estética y Micropigmentación</title>
+  <meta name="description" content="Conocé todos los servicios de Zero Studio en Málaga: tatuajes, piercings, micropigmentación, tratamientos faciales, corporales, estética, depilación, masajes y más.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Servicios en Zero Studio | Tattoo & Beauty en Málaga">
+  <meta property="og:description" content="Servicios de tatuajes, piercings, micropigmentación y estética profesional en Zero Studio.">
+  <meta property="og:image" content="img/background.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com/servicios">
+
+  <!-- Seguridad -->
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <img src="img/logo-placeholder-image.png" alt="Logo Estudio Tattoo" class="logo" />
-    <h1 class="services-heading">Servicios</h1>
-    <ul class="services-menu">
-      <li class="services-menu-item__li"> Hacemos pajas con el Culo bien rico</li>
-      <li class="services-menu-item__li"> Te ponemos piercings en la verga o en los huevos</li>
-      <li class="services-menu-item__li"> Diseñamos usando la punta de la verga</li>
-    </ul>
-    <a href="index.html" class="menu-item__link-back">Volver</a>
+
+    <div class="services-bg-img-container fade-in">
+        <img src="img/background.jpg"
+             alt="Zero Studio - Estudio de tatuajes y estética en Málaga"
+             class="services-bg-img">
+    </div>
+
+    <div class="services-cta-container fade-in">
+       <a href="/index.html" class="services-link" target="_self" aria-label="Volver al inicio">
+         <svg id="left-arrow-backward-sign" style="enable-background:new 0 0 15.699 8.707;" version="1.1" viewBox="0 0 15.699 8.707" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="15.699,3.854 1.914,3.854 5.061,0.707 4.354,0 0,4.354 4.354,8.707 5.061,8 1.914,4.854 15.699,4.854 "/></svg>
+       </a>
+   </div>
+
+  <main class="services-container fade-in">
+
+      <div class="services-heading-container fade-in">
+        <div class="services-title-container fade-in">
+          <!-- Esto DEBE ser H1 para SEO -->
+          <h1 class="services-title fade-in">ZERO <span class="services-title-second-word">STUDIO</span></h1>
+          <p class="services-subtitle fade-in">BEAUTY & TATTOO</p>
+        </div>
+      </div>
+
+      <ul class="services-menu fade-in">
+        <!-- Esto no debería ser un <p> dentro de un <ul>.
+             Lo cambié a <h2> SEMÁNTICO (no cambia tu CSS) -->
+        <h2 class="service-menu-title fade-in">SERVICIOS</h2>
+
+        <li class="services-menu-item fade-in">
+          TATUAJES
+        </li>
+        <li class="services-menu-item fade-in">
+          PIERCINGS
+        </li>
+        <li class="services-menu-item fade-in">
+          MICROPIGMENTACIÓN
+        </li>
+
+        <li class="services-menu-item sub-menu fade-in">
+         ESTÉTICA
+          <ul class="services-submenu fade-in">
+
+            <li class="services-submenu-item fade-in">
+              TRATAMIENTOS FACIALES
+              <ul>
+                <li class="services-deep-menu-item fade-in">LIMPIEZA FACIAL</li>
+                <li class="services-deep-menu-item fade-in">REJUVENECIMIENTO FACIAL</li>
+              </ul>
+            </li>
+
+            <li class="services-submenu-item fade-in">
+              TRATAMIENTOS CORPORALES
+              <ul>
+                <li class="services-deep-menu-item fade-in">DEPILACIÓN</li>
+                <li class="services-deep-menu-item fade-in">MASAJES</li>
+                <li class="services-deep-menu-item fade-in">CRIOLIPOLISIS</li>
+              </ul>
+            </li>
+
+            <li class="services-submenu-item fade-in">DISEÑO, PERFILADO Y TINTE DE CEJAS</li>
+            <li class="services-submenu-item fade-in">LIFTING Y EXTENSIONES CLÁSICAS, HÍBRIDAS Y 3D</li>
+
+          </ul>
+        </li>
+      </ul>
+
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".fade-in");
+
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("show");
+        }, index * 150);
+      });
+    });
+  </script>
+
 </body>
 </html>
