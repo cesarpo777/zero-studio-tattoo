@@ -18,7 +18,7 @@
   <!-- Seguridad -->
   <meta name="referrer" content="no-referrer-when-downgrade">
 
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
 
@@ -99,6 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       el.classList.add("show");
     }, index * 150);
+
+    if (el.classList.contains("services-subtitle")) {
+      el.style.transform = " translateY(-10px) ";
+    }
   });
 
   // Dropdown functionality
