@@ -177,10 +177,26 @@ nav {
         path{
             fill: #AAAAA6;
         }
+
+        @media screen and (max-width: 576px){
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
 
     svg:hover{
         opacity: .4;
+    }
+}
+
+
+/* 5. Media Query para pantallas pequeñas */
+@media screen and (max-width: 576px) {
+    .menu-link svg {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -343,6 +359,7 @@ nav {
 .service-menu-title{
     border-bottom: 1px solid black;
     font-size: 32px;
+    letter-spacing: 1px;
 }
 
 .services-menu-item{
